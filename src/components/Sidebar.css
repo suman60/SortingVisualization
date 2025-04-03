@@ -1,89 +1,72 @@
-.sidebar {
-  width: 280px;
-  box-shadow: 5px 0px 10px 1px lightgrey;
-  background-color: aliceblue;
-}
 
-.sidebar__option {
+/* Sidebar container with 3D card effect */
+.sidebar-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   padding: 20px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-bottom: 1px solid rgb(238, 238, 238);
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
 }
 
-label {
-  font-weight: 500;
+/* Hover effect for the entire sidebar */
+.sidebar-container:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
-select {
-  border: none;
-  font-size: 0.9rem;
+/* Sidebar option styling */
+.sidebar__option {
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+/* Hover effect for sidebar options */
+.sidebar__option:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Label styling */
+.sidebar__option label {
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 5px;
+  display: block;
+}
+
+/* Select box styling */
+.sidebar__option select {
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Focus effect on select */
+.sidebar__option select:focus {
+  border-color: #3498db; /* blue focus color */
   outline: none;
-  background-color: transparent;
+  box-shadow: 0 0 5px rgba(52, 152, 219, 0.7); /* blue shadow on focus */
 }
 
-.MuiSlider-track {
-  color: green;
+/* Slider styling */
+.sidebar__option .slider {
+  width: 100%;
+  margin-top: 5px;
+  border-radius: 10px;
 }
 
-.slider {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* Slider hover effect */
+.sidebar__option .slider:hover {
+  cursor: pointer;
 }
 
-@media only screen and (max-width: 1000px) {
-  .sidebar {
-    width: 200px;
-  }
-
-  .sidebar__option {
-    padding: 10px;
-  }
-
-  select {
-    font-size: 0.8rem;
-  }
-
-  label {
-    font-size: 0.9rem;
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  .sidebar {
-    height: 40px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    box-shadow: 0px 2px 10px 1px lightgrey;
-  }
-
-  .slider {
-    max-width: 50px;
-  }
-  .sidebar__option {
-    padding: 10px;
-    margin-bottom: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 2px;
-    max-width: 72px;
-    margin-right: -2px;
-    border-bottom: none;
-  }
-
-  select {
-    font-size: 0.8rem;
-    font-weight: 500;
-  }
-
-  label {
-    font-size: 0.9rem;
-    display: none;
-  }
-}
