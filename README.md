@@ -6,6 +6,6 @@
 5. Quick sort
 # You can change the array values , array size  and the speed of the sorting visualization. 
 
-![Sorting Algorithm Visualization](C:\Users\Suman Mandol\Pictures\Screenshots/sorting.png)
+![Sorting Algorithm Visualization](sorting.png)
 
 
